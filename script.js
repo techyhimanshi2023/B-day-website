@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', function () {
         let mainAutoScroll;
         let hoverScrollInterval;
 
-        // Clone items multiple times for long continuous scroll
         let clonedSet = [];
         for (let i = 0; i < 6; i++) {
             clonedSet = clonedSet.concat(originalItems.map(item => item.cloneNode(true)));
@@ -63,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function () {
             stopMainAutoScroll();
             mainAutoScroll = setInterval(() => {
                 moveNext();
-            }, 800); // faster scroll speed
+            }, 800); 
         }
 
         function stopMainAutoScroll() {
